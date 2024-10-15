@@ -332,6 +332,12 @@ function htmlToPptxText(html, options) {
                 context.setFontFace(attr.face);
                 context.setFontSize(attr.size);
                 break;
+            case 'strong':
+                context.b = true;
+                break;
+            case 'em': 
+                context.i = true;
+                break;
         }
 
         attr.align && (context.align = attr.align);

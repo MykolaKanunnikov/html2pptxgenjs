@@ -9,6 +9,7 @@ Install with ```npm```:
 The ```dist``` folder contains the following distribution files:
 - ```html2pptxgenjs.cjs.js``` for Node.js
 - ```html2pptxgenjs.min.js``` for web browsers
+- ```html2pptxgenjs.js``` for Visaulforce
 
 # Usage
 Html2pptxgenjs parses and HTML snippet and converts it into a list of items that can be then used with ```addSlide()```.
