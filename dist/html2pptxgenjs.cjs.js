@@ -295,12 +295,8 @@ function htmlToPptxText(html, options) {
             case 'strike':
                 context.s = true;
                 break;
-            case 'br':
-                addBreak();
-                break;
             case 'p':
                 context.paraSpaceBefore = options.paraSpaceBefore || context.fontSize;
-                addBreak();
                 context.paraSpaceBefore = 0;
                 break;
             case 'ol':
@@ -376,6 +372,7 @@ function htmlToPptxText(html, options) {
                     context.bullet = false;
                     addText('');
                 }
+                addBreak();
                 break;
             case 'p':
                 context.paraSpaceAfter = options.paraSpaceAfter || context.fontSize;
