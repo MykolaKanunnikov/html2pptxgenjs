@@ -48,7 +48,6 @@ function htmlToPptxText(html, options) {
             case 's':
             case 'sub':
             case 'sup':
-            case 'u':
                 context[name] = true;
                 break;
             case 'del':
@@ -93,6 +92,9 @@ function htmlToPptxText(html, options) {
                 break;
             case 'em': 
                 context.i = true;
+                break;
+            case 'u':
+                context.u = { style: 'sng' };
                 break;
         }
 

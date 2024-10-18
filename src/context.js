@@ -214,7 +214,7 @@ Context.prototype.toPptxTextOptions = function () {
     options.strike = !!this.s;
     options.subscript = !!this.sub;
     options.superscript = !!this.sup;
-    options.underline = !!this.u;
+    options.underline = typeof this.u === 'object' ? this.u : !!this.u;
 
     switch (this.bullet) {
         case true:
